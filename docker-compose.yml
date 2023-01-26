@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  wishlistdb:
+    container_name: wishlistdb
+    image: postgres:12
+    environment:
+      POSTGRES_USER: wishlistdb
+      POSTGRES_PASSWORD: wishlistdb
+      POSTGRES_DB: wishlistdb
+    ports:
+      - "32768:5432"
+    volumes:
+      - ./docker/wishlistdb:/var/lib/
